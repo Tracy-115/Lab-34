@@ -56,7 +56,7 @@ public:
     }
     void DFS(int v){
         vector<bool> visited(SIZE, false);
-        Depth(v, visited);
+        Depth(v, visited); //this is used to call the Depth function
     }
 
 };
@@ -74,7 +74,7 @@ int main() {
     // Prints adjacency list representation of graph
     graph.printGraph();
 
-
+    graph.DFS(0); //performs the function DFS from the vertex 0
 
     return 0;
 }
