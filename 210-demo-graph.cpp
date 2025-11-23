@@ -58,6 +58,17 @@ public:
         vector<bool> visited(SIZE, false);
         Depth(v, visited); //this is used to call the Depth function
     }
+    void BFS(int b){
+        vector<bool> visited(SIZE, false);
+        queue<int>v; //I created this so that we know how many verticies we have to go through
+        visited[b] = true; //after going through each of the vertex, it is marked true so that you won't repeat the visit
+        q.push(b);
+        while (!q.empty()) {
+            int l = q.front();
+            q.pop();
+            cout << l << " ";
+        }
+    }
 
 };
 
