@@ -43,17 +43,22 @@ public:
             cout << endl;
         }
     }
-    void DFS(int v, vector<book>&visited){
+    void Depth(int v, vector<bool>&visited){
         visited[v] = true;
         cout << v << " ";
 
-        for (auto &edge: adjList[v]){ //looping through the vertix, it's like visiting different vertexs
-            int next = dge.first;
+        for (auto &edge: adjList[v]){ //this goes through the vertex's neighbors and then if it's not visited, we recall the depth first search to the next vertix
+            int next = edge.first;
             if (!visited[next]){
-                DSF(next, visited):
+                Depth(next, visited);
             }
         }
     }
+    void DFS(int v){
+        vector<bool> visited(SIZE, false);
+        Depth(v, visited);
+    }
+
 };
 
 int main() {
