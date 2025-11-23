@@ -44,8 +44,15 @@ public:
         }
     }
     void DFS(int v, vector<book>&visited){
-        
+        visited[v] = true;
+        cout << v << " ";
 
+        for (auto &edge: adjList[v]){ //looping through the vertix, it's like visiting different vertexs
+            int next = dge.first;
+            if (!visited[next]){
+                DSF(next, visited):
+            }
+        }
     }
 };
 
@@ -61,6 +68,8 @@ int main() {
 
     // Prints adjacency list representation of graph
     graph.printGraph();
+
+
 
     return 0;
 }
